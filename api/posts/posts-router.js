@@ -17,4 +17,16 @@ router.get('/', async (req, res) => {
     }
 })
 
+// #### 2 [GET] /api/posts/:id
+router.get('/:id', async (req, res) => {
+    try{
+        throw new Error("testing catch")
+    } catch (err) {
+        res.status(500).json({
+            message: "The post information could not be retrieved"
+        })
+    }
+})
+
+
 module.exports = router
